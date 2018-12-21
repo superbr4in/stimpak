@@ -13,14 +13,14 @@ namespace stim
         {
             auto const indirection =
                 [](auto&& value)
-                    -> decltype(*std::forward<decltype(value)>(value))
+                    -> decltype(*value)
                 {
-                    return *std::forward<decltype(value)>(value);
+                    return *value;
                 };
 
             return
-                sfinae(indirection, std::forward<T1>(value1)) <
-                sfinae(indirection, std::forward<T2>(value2));
+                sfiid(indirection, value1)() <
+                sfiid(indirection, value2)();
         }
     };
 }
