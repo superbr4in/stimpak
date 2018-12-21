@@ -11,7 +11,7 @@ Use the desired header files present in the [include directory](include/stimpak/
 | Header                                             | Purpose                                                                                                                                         |
 | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`comparison.hpp`](include/stimpak/comparison.hpp) | Reusable comparators for straightforward sequence sorting                                                                                       |
-| [`variation.hpp`](include/stimpak/variation.hpp)   | Simple `std::variant` processing                                                                                                                |
 | [`sfinae.hpp`](include/stimpak/sfinae.hpp)         | [**S**ubstitution **F**ailure **I**s **N**ot **A**n **E**rror](https://en.wikipedia.org/wiki/Substitution_failure_is_not_an_error) realizations |
+| [`variation.hpp`](include/stimpak/variation.hpp)   | Simple `std::variant` processing                                                                                                                |
 
-Refer to the documentation comments in the code files for detailed information.
+Refer to the documentation comments in the code files for detailed information about the respective implementations.
