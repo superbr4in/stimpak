@@ -4,6 +4,10 @@
 
 namespace sti
 {
+    /*!
+     *  Universal comparator with the ability to dereference pointers and
+     *  other wrapping types for comparison.
+     */
     struct wrap_comparator
     {
         using is_transparent = std::true_type;

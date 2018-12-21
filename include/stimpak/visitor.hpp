@@ -2,6 +2,9 @@
 
 namespace sti
 {
+    /*!
+     *  Helper type to provide multiple lambdas to the \c std::visit function.
+     */
     template <typename... Ts>
     struct generic_visitor : Ts...
     {

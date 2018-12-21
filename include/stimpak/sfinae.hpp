@@ -4,6 +4,10 @@
 
 namespace sti
 {
+    /*!
+     *  Implements SFINAE behaviour by compensating a substitution failure with the
+     *  respective identity function.
+     */
     template <typename T, typename TFunc, typename = void>
     struct sfiid
     {

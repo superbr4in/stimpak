@@ -6,6 +6,10 @@
 
 namespace sti
 {
+    /*!
+     *  Transfers the values of a sequence containing diverse types to multiple sequences with
+     *  each containing one certain type.
+     */
     template <typename... Ts>
     inline std::tuple<std::vector<Ts>...> filter(std::vector<std::variant<Ts...>> variants)
     {
