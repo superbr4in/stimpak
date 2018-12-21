@@ -2,7 +2,7 @@
 
 #include <type_traits>
 
-namespace stim
+namespace sti
 {
     template <typename T, typename TFunc, typename = void>
     struct sfiid

@@ -4,7 +4,7 @@
 #include <variant>
 #include <vector>
 
-namespace stim
+namespace sti
 {
     template <typename... Ts>
     inline std::tuple<std::vector<Ts>...> filter(std::vector<std::variant<Ts...>> variants)

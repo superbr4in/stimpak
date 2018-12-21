@@ -2,7 +2,7 @@
 
 #include "sfinae.hpp"
 
-namespace stim
+namespace sti
 {
     struct wrap_comparator
     {

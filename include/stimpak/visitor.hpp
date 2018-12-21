@@ -1,6 +1,6 @@
 #pragma once
 
-namespace stim
+namespace sti
 {
     template <typename... Ts>
     struct generic_visitor : Ts...
