@@ -17,10 +17,10 @@ namespace sti
 
     public:
 
-        sfiid(TFunc&, T& value)
+        inline sfiid(TFunc&, T& value)
             : value_(value) { }
 
-        auto operator()() const
+        inline auto operator()() const
         {
             return value_;
         }
@@ -35,10 +35,10 @@ namespace sti
 
     public:
 
-        sfiid(TFunc& func, T& value)
+        inline sfiid(TFunc& func, T& value)
             : func_(func), value_(value) { }
 
-        auto operator()() const
+        inline auto operator()() const
         {
             return func_(value_);
         }
