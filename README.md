@@ -2,7 +2,7 @@
 
 **S**tandard **T**emplate library **Im**provement **Pa**c**k**age
 
-This is a header-only project without further requirements except the `C++17` language standard.
+This is a header-only project on the `C++17` language standard without further requirements.
 
 ## Features
 
