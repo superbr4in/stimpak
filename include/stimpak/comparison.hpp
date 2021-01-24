@@ -1,6 +1,6 @@
 #pragma once
 
-#include "sfinae.hpp"
+#include <stimpak/sfinae.hpp>
 
 namespace sti
 {
