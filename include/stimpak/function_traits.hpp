@@ -20,7 +20,11 @@ namespace sti
     template <decayed T, typename Result, typename... Arguments>
     struct function_traits<Result (T::*)(Arguments...)> : function_traits<Result (*)(Arguments...)> { };
     template <decayed T, typename Result, typename... Arguments>
+    struct function_traits<Result (T::*)(Arguments...) noexcept> : function_traits<Result (*)(Arguments...)> { };
+    template <decayed T, typename Result, typename... Arguments>
     struct function_traits<Result (T::*)(Arguments...) const> : function_traits<Result (T::*)(Arguments...)> { };
+    template <decayed T, typename Result, typename... Arguments>
+    struct function_traits<Result (T::*)(Arguments...) const noexcept> : function_traits<Result (T::*)(Arguments...)> { };
 
     template <typename Function>
     using result_type = typename function_traits<Function>::result_type;
