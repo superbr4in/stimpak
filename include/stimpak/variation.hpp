@@ -7,6 +7,9 @@
 
 namespace sti
 {
+    template <template <typename> typename T, typename... Us>
+    using common_variant = std::variant<T<Us>...>;
+
     template <typename, typename>
     struct type_of_variant_checker
     { };
