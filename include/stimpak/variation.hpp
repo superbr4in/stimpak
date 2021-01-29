@@ -3,8 +3,28 @@
 #include <variant>
 #include <vector>
 
+#include <stimpak/packing.hpp>
+
 namespace sti
 {
+    template <typename, typename>
+    struct type_of_variant_checker
+    { };
+    template <typename T, typename... Us>
+    struct type_of_variant_checker<T, std::variant<Us...>> : type_of_pack_checker<T, Us...>
+    { };
+    template <typename T, typename Variant>
+    concept type_of_variant = type_of_variant_checker<T, Variant>::value;
+
+    template <typename, typename>
+    struct type_of_common_variant_checker
+    { };
+    template <typename T, template <typename> typename U, typename... Vs>
+    struct type_of_common_variant_checker<T, std::variant<U<Vs>...>> : type_of_variant_checker<U<T>, std::variant<U<Vs>...>>
+    { };
+    template <typename T, typename Variant>
+    concept type_of_common_variant = type_of_common_variant_checker<T, Variant>::value;
+
     /*!
      *  Helper type to provide multiple lambdas to the \c std::visit function.
      */
