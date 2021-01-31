@@ -3,9 +3,11 @@
 #include <istream>
 #include <vector>
 
+#include <stimpak/conceptual.hpp>
+
 namespace sti
 {
-    template <std::integral CharT>
+    template <decayed_integral_or_enum CharT>
     bool begins_with(std::basic_istream<CharT>& stream, std::basic_string<CharT> const& string)
     {
         std::basic_string peeked_string(string.size(), CharT{0});
@@ -17,7 +19,7 @@ namespace sti
         return peeked_string == string;
     }
 
-    template <std::integral T, std::integral CharT>
+    template <decayed_integral_or_enum T, decayed_integral_or_enum CharT>
     T extract(std::basic_istream<CharT>& stream)
     {
         T value;
@@ -26,7 +28,7 @@ namespace sti
 
         return value;
     }
-    template <std::integral T, std::integral CharT>
+    template <decayed_integral_or_enum T, decayed_integral_or_enum CharT>
     std::vector<T> extract(std::basic_istream<CharT>& stream, std::size_t const& size)
     {
         std::vector<T> data(size);
